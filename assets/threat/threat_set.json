@@ -1,0 +1,121 @@
+{
+ "version": 1,
+ "note": "DEMO threat set. Numbers are fake placeholders. The backend will replace this file via signed sync.",
+ "hmacKey": "khabardar-dev-key-v1-replace-on-sync",
+ "scamThreshold": 60,
+ "suspiciousThreshold": 30,
+ "trustedSenders": [
+  "8171"
+ ],
+ "trustedDomains": [
+  "gov.pk",
+  "bisp.gov.pk",
+  "sbp.org.pk"
+ ],
+ "numbers": [
+  {
+   "h": "18ac14f2fc86b5350ac63c5e1e12516f03e4bc76a7ec7b2f23fef63d8cf12d1a",
+   "category": "bisp",
+   "reports": 214
+  },
+  {
+   "h": "ac3a2013c02bae872e1c4d3641ba5fb2476e400b9cb1192c0017ae78541ab4ec",
+   "category": "bank",
+   "reports": 97
+  },
+  {
+   "h": "245ecd53ae0fdfd147b4ae5869389fb2de582d8a15e28dca56ae875e371cd802",
+   "category": "prize",
+   "reports": 41
+  },
+  {
+   "h": "ff4c94d7185cce7986f81e9d97d3191db68b0d695cdbca4670eb88c7b831bc52",
+   "category": "bank",
+   "reports": 63
+  },
+  {
+   "h": "0ce73387958003018e95d42f60104f252b97be4d7e6343de1cc88fbb7dda90ad",
+   "category": "official",
+   "reports": 18
+  },
+  {
+   "h": "58ecd76b16258833d4b68446f24239b21ecb95b4c1bd097e2034b505e4d9fef3",
+   "category": "courier",
+   "reports": 12
+  }
+ ],
+ "rules": [
+  {
+   "id": "bisp_mention",
+   "category": "bisp",
+   "weight": 20,
+   "pattern": "(bisp|ehsaas|benazir|بینظیر|احساس)"
+  },
+  {
+   "id": "fee_request",
+   "category": "bisp",
+   "weight": 25,
+   "pattern": "(fee|charges|processing|jama kar|جمع کر|فیس)"
+  },
+  {
+   "id": "otp_request",
+   "category": "bank",
+   "weight": 45,
+   "pattern": "(otp|one[ -]?time|verification code|pin code|code.{0,30}(share|bata|send|bhej)|(share|bata|bhej).{0,30}code|کوڈ)"
+  },
+  {
+   "id": "account_threat",
+   "category": "bank",
+   "weight": 30,
+   "pattern": "(account|card|sim|wallet|khata|اکاؤنٹ).{0,40}(block|band|suspend|expire|deactivat|بند)"
+  },
+  {
+   "id": "prize_lure",
+   "category": "prize",
+   "weight": 25,
+   "pattern": "(congratulation|mubarak|lucky draw|inaam|prize|you won|jeet gaye|انعام)"
+  },
+  {
+   "id": "urgency",
+   "category": "other",
+   "weight": 10,
+   "pattern": "(urgent|foran|fori|turant|immediately|within 24|aaj hi|فوراً)"
+  },
+  {
+   "id": "official_impersonation",
+   "category": "official",
+   "weight": 15,
+   "pattern": "(fia|nccia|police|pta|state bank|sbp|court|customs)"
+  },
+  {
+   "id": "courier_fee",
+   "category": "courier",
+   "weight": 30,
+   "pattern": "(parcel|courier|delivery|shipment).{0,60}(fee|pay|address|update|customs)"
+  },
+  {
+   "id": "link",
+   "category": "other",
+   "weight": 15,
+   "pattern": "(https?://|www\\.|bit\\.ly|tinyurl)"
+  },
+  {
+   "id": "risky_domain",
+   "category": "other",
+   "weight": 20,
+   "pattern": "[a-z0-9-]+(\\[\\.\\]|\\.)(xyz|top|click|info|online|site|live|link|buzz|icu)\\b"
+  }
+ ],
+ "bankingPackages": [
+  "pk.com.telenor.phoenix",
+  "com.techlogix.mobilinkcustomer",
+  "invo8.meezan.mb",
+  "com.sadapay.app",
+  "com.nayapay.app",
+  "com.hbl.android.hblmobilebanking",
+  "com.ubl.digital",
+  "com.mcb.mcblive",
+  "com.bankalfalah.alfamobile",
+  "com.ofss.digx.mobile.android.allied"
+ ]
+}

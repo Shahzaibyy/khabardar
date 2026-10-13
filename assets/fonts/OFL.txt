@@ -1,0 +1,4 @@
+Manrope and Noto Nastaliq Urdu are licensed under the SIL Open Font License, Version 1.1.
+Full text: https://openfontlicense.org/open-font-license-official-text/
+Manrope: Copyright 2018 The Manrope Project Authors (https://github.com/sharanda/manrope)
+Noto Nastaliq Urdu: Copyright 2014-2023 Google LLC and The Noto Project Authors (https://github.com/notofonts/nastaliq)
